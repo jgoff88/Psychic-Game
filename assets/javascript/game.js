@@ -3,7 +3,7 @@ var counter= 9;
     if (counter != 0) {
         var compGuess = letters[Math.floor(Math.random() * letters.length)];
             console.log("Computers key:", compGuess);
-        document.onkeyup = function(event){
+            document.onkeyup = function(event){
             var userGuess= event.key.toLocaleLowerCase();
             console.log("keypressed:", userGuess);
             if(compGuess === userGuess){
@@ -15,6 +15,6 @@ var counter= 9;
 
             }
         }
-    } else {
-        alert("You Lost! Try again");
+    } else if (counter == 0) {
+        alert("Your out of guesses! The answer was " + compGuess);
     }
